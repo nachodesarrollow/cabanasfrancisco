@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="La Casa de Francisco">
+  <rect width="64" height="64" rx="10" fill="#35483A"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="7" fill="none" stroke="#F7F4EC" stroke-opacity="0.28" stroke-width="1"/>
+  <text x="33" y="46.5" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif" font-size="40" font-weight="500" fill="#F7F4EC">F</text>
+</svg>
