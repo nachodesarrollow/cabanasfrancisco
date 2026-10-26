@@ -1,0 +1,200 @@
+{
+  "piscina-merlo": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 48252
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 98772
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 149888
+      }
+    ],
+    "color": "#5f7f7e"
+  },
+  "piscina-jardin": {
+    "width": 1080,
+    "height": 802,
+    "variants": [
+      {
+        "width": 480,
+        "height": 356,
+        "bytes": 35766
+      },
+      {
+        "width": 760,
+        "height": 564,
+        "bytes": 67646
+      },
+      {
+        "width": 1080,
+        "height": 802,
+        "bytes": 101370
+      }
+    ],
+    "color": "#656d64"
+  },
+  "piscina-cabanas": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 53806
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 123776
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 221114
+      }
+    ],
+    "color": "#737a6f"
+  },
+  "piscina-detalle": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 31438
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 65494
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 108486
+      }
+    ],
+    "color": "#479592"
+  },
+  "asador": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 26668
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 60186
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 105392
+      }
+    ],
+    "color": "#876e60"
+  },
+  "galeria-exterior": {
+    "width": 1080,
+    "height": 804,
+    "variants": [
+      {
+        "width": 480,
+        "height": 357,
+        "bytes": 37748
+      },
+      {
+        "width": 760,
+        "height": 566,
+        "bytes": 73442
+      },
+      {
+        "width": 1080,
+        "height": 804,
+        "bytes": 115804
+      }
+    ],
+    "color": "#7a7c70"
+  },
+  "patio-terraza": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 50890
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 118814
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 201242
+      }
+    ],
+    "color": "#80764e"
+  },
+  "interior-comedor": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 19910
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 38564
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 62558
+      }
+    ],
+    "color": "#6e6259"
+  },
+  "interior-cocina": {
+    "width": 1080,
+    "height": 810,
+    "variants": [
+      {
+        "width": 480,
+        "height": 360,
+        "bytes": 20642
+      },
+      {
+        "width": 760,
+        "height": 570,
+        "bytes": 39140
+      },
+      {
+        "width": 1080,
+        "height": 810,
+        "bytes": 61058
+      }
+    ],
+    "color": "#99886f"
+  }
+}

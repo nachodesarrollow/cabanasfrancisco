@@ -1,0 +1,234 @@
+@import "./fonts.css";
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype",
+    Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, sans-serif;
+
+  --color-cream: #f7f4ec;
+  --color-cream-soft: #fcfaf4;
+  --color-sand: #e6ddce;
+  --color-sand-deep: #d7cab6;
+  --color-olive: #35483a;
+  --color-olive-deep: #27362c;
+  --color-olive-ink: #1a241e;
+  --color-sage: #687a60;
+  --color-clay: #7f6751;
+  --color-ink: #292d28;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-olive);
+    color: var(--color-cream);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  /* Los controles nativos de fecha heredan el color de la marca. */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.55;
+    cursor: pointer;
+  }
+
+  ::placeholder {
+    color: color-mix(in srgb, var(--color-ink) 38%, transparent);
+  }
+}
+
+@layer components {
+  .shell {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 92rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .shell {
+      padding-inline: 3.25rem;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .shell {
+      max-width: 100rem;
+      padding-inline: 4.5rem;
+    }
+  }
+
+  .eyebrow {
+    font-size: 0.66rem;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  /* Título de sección: serif grande, interlineado compacto. */
+  .section-title {
+    font-size: clamp(2.35rem, 4.6vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  .lead {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: color-mix(in srgb, var(--color-ink) 68%, transparent);
+  }
+
+  @media (min-width: 640px) {
+    .lead {
+      font-size: 1.0625rem;
+    }
+  }
+}
+
+/* ---- Animación de aparición al hacer scroll --------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.9s var(--ease-soft),
+    transform 0.9s var(--ease-soft);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* ---- Detalle de scroll del hero --------------------------------------- */
+@keyframes cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.cue-line::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 45%;
+  background-color: currentColor;
+  animation: cue 2.6s var(--ease-soft) infinite;
+}
+
+/* ---- Lightbox ---------------------------------------------------------- */
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lightbox-figure-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.lightbox-backdrop {
+  animation: lightbox-in 0.35s var(--ease-soft) both;
+}
+
+.lightbox-figure {
+  animation: lightbox-figure-in 0.45s var(--ease-soft) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .cue-line::after {
+    display: none;
+  }
+}
